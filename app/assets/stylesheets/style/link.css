@@ -1,0 +1,10 @@
+.link {
+  margin: 1rem;
+  text-decoration: none;
+}
+
+.link-home {
+  margin: 1rem;
+  padding: 0;
+  text-decoration: none;
+}

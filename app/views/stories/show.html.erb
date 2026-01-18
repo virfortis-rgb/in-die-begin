@@ -1,0 +1,8 @@
+<%= @story.title %>
+<div>
+  <% @story.content.split() do |c| %>
+    <span>
+      <%= c %>
+    </span>
+  <% end %>
+</div>

@@ -1,4 +1,16 @@
-.home-page-nav-card {
+.home-card {
+  margin: 1rem;
+  border: 0.1rem solid darkgrey;
+  border-radius: 8px;
+  box-shadow: 0 0 0.1rem 0.1rem darkgrey;
+}
+
+.home-card > div {
+  margin: 0.8rem;
+  font-family: ovo-regular;
+}
+
+/* .home-page-nav-card {
   width: 250px;
   height: 200px;
   padding: 8px;
@@ -14,8 +26,7 @@
   text-decoration: none;
   font-family: ovo-regular;
   color:  white;
-}
-
+} */
 
 /* .home-page-nav-card {
   display: flex;

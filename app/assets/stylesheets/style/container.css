@@ -1,4 +1,4 @@
-.container-title {
+.container-home-title {
   margin: 0 auto;
   color: white;
 }
@@ -12,6 +12,16 @@
 .container-carousel {
   margin-top: 10px;
   height: 90vh;
+}
+
+.container-home-cards {
+  margin: 2rem;
+}
+
+.container-home-cards > div {
+  margin-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* .container-main {
