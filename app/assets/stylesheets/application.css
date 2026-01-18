@@ -8,3 +8,20 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+@import url("./style/banner.css");
+@import url("./style/container.css");
+@import url("./style/font.css");
+@import url("./style/navigation.css");
+@import url("./style/card.css");
+@import url("./style/form.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+
+}
+
+header {
+  background-color: white;
+}

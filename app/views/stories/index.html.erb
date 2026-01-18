@@ -1,0 +1,15 @@
+<h2>Lees 'n bietjie: </h2>
+<div>
+  <%  @stories. each do |s|%>
+    <div>
+      <%= s.title %>
+      <div>
+        <% s.content.split() do |c| %>
+          <span>
+            <%= c %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

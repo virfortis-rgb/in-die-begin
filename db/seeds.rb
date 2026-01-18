@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Story.create(title: "Die Kat", content: "Dit is ’n kat.
+Die kat is klein.
+Die kat sien ’n bal.
+Die kat speel met die bal.
+Die kat is bly.")
+
+Story.create(title: "Die Hond", content: "Dit is ’n hond.
+Die hond is groot.
+Die hond sien ’n man.
+Die hond hardloop.
+Die hond is bly.")
+
+Story.create(title: "Die Son", content: "Die son is warm.
+Die son is hoog.
+Ek sien die son.
+Ek loop buite.
+Ek is bly.")

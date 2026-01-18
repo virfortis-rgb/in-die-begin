@@ -1,0 +1,15 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 90vh;
+  width: 100%;
+}
+
+.banner h1, .container p {
+  margin: 0;
+  text-align: center;
+}

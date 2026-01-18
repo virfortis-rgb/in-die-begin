@@ -8,22 +8,46 @@
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= yield :head %>
-
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Pirata+One&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>In die Begin</title>
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+    <header>
+      <nav>
+        <%= link_to "in die begin_", pages_home_path, class: "pirata-one-regular" %>
+        <ul class="d-flex dlex-column m-0 p-0">
+          <li class="align-self-center">
+            <a href="#" target="_blank" class="pirata-one-regular">Tuis</a>
+          </li>
+          <li class="align-self-center">
+            <a href="./pages/stories.html" target="_blank" class="pirata-one-regular">Stories</a>
+          </li>
+          <li  class="align-self-center">
+            <a href="#" target="_blank" class="pirata-one-regular">Woordeskat</a>
+          </li>
+          <li  class="align-self-center">
+            <a href="#" target="_blank" class="pirata-one-regular">Grammatika</a>
+          </li>
+          <li  class="align-self-center">
+            <a href="#" target="_blank" class="pirata-one-regular">Luister</a>
+          </li>
+          <li  class="align-self-center">
+            <a href="#" target="_blank" class="pirata-one-regular">Hulpbronne</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

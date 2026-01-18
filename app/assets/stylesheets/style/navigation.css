@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: white;
+}
+
+nav a {
+  padding: 10px;
+  color:  #2f3034;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60vw;
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
