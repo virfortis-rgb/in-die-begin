@@ -1,0 +1,11 @@
+.unknown-vocab {
+  margin: 0.2rem;
+  padding: 0.1rem;
+  background-color: aquamarine;
+  font-size: 2rem;
+  border-radius: 0.1rem;
+}
+
+.unknown-vocab:hover {
+  background-color: rgb(26, 166, 119);
+}

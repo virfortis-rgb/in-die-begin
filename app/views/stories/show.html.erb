@@ -1,8 +1,15 @@
-<%= @story.title %>
-<div>
-  <% @story.content.split() do |c| %>
-    <span>
-      <%= c %>
-    </span>
-  <% end %>
+<div class="card-reading-title">
+  <%= @story.title %>
+  <div class="card-reading">
+    <% @story.content.split() do |c| %>
+      <span class="unknown-vocab">
+        <% if c.include? "." %>
+          <%= c %>
+          <br>
+        <% else %>
+          <%= c %>
+        <% end %>
+      </span>
+    <% end %>
+  </div>
 </div>

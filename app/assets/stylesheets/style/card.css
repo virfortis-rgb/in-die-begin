@@ -10,6 +10,16 @@
   font-family: ovo-regular;
 }
 
+.card-reading-title {
+  margin: 1rem;
+}
+
+
+.card-reading {
+  margin: 1rem;
+  padding: 1rem;
+}
+
 /* .home-page-nav-card {
   width: 250px;
   height: 200px;

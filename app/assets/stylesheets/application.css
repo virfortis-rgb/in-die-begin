@@ -14,6 +14,7 @@
 @import url("./style/navigation.css");
 @import url("./style/card.css");
 @import url("./style/form.css");
+@import url("./style/vocab.css");
 
 body {
   margin: 0;
