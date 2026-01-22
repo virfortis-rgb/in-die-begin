@@ -15,7 +15,7 @@ nav {
 nav a {
   padding: 10px;
   color:  #2f3034;
-  font-size: 1em;
+  font-size: 1.2em;
   text-decoration: none;
 }
 
@@ -24,8 +24,4 @@ ul {
   justify-content: space-evenly;
   width: 60vw;
   list-style-type: none;
-}
-
-li a {
-  text-decoration: none;
 }

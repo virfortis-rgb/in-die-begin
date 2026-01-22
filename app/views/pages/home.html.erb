@@ -4,18 +4,3 @@
     <p class="pirata-one-regular">'n plek waar enige iemand Afrikaans kan leer</p>
   </div>
 </div>
-<div class="container-home-cards">
-  <div>
-    <%= link_to "Stories", stories_path, class: "ovo-regular link"%>
-  </div>
-  <div>
-    <% @stories.each do |s| %>
-      <div class="home-card">
-        <img src="app/assests/images/cat-oncouch.jpg" alt="">
-        <div>
-          <%= link_to s.title, story_path(s) %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
