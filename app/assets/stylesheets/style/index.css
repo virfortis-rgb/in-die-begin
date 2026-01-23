@@ -1,0 +1,13 @@
+@import url("banner.css");
+@import url("container.css");
+@import url("font.css");
+@import url("navigation.css");
+@import url("card.css");
+@import url("form.css");
+@import url("vocab.css");
+@import url("footer.css");
+
+body {
+  margin: 0;
+  padding: 0;
+}
