@@ -1,13 +1,13 @@
 <div>
   <h2>Lees 'n bietjie: </h2>
   <div class="home-card-container">
-    <% @stories.each do |s| %>
+    <% @stories.each do |story| %>
       <div class="home-card">
         <div class="card-image-container">
           <%= image_tag 'Cat-on-couch.jpg', class: "card-image" %>
         </div>
         <div>
-          <%= link_to s.title, story_path(s) %>
+          <%= link_to story.title, story_path(story), class: "ovo-regular link", style: "font-size: 2rem;" %>
         </div>
       </div>
     <% end %>

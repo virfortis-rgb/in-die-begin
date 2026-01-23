@@ -1,6 +1,13 @@
 .link {
   margin: 1rem;
   text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  background-color: antiquewhite;
+  color: darkgrey;
+  border-radius: 0.2rem;
 }
 
 .link-home {
