@@ -1,15 +1,12 @@
-header {
-  position: sticky; /* Toggles between relative and fixed on scroll */
+nav {
+    position: sticky; /* Toggles between relative and fixed on scroll */
   top: 0;           /* Sticks to the top of the viewport once it hits this offset */
   z-index: 10;      /* Ensures the header is on top of other content */
-  box-shadow: 0 0 0.1rem 0.1rem darkgrey;
-}
-nav {
-  position: stricky;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   background-color: white;
+  box-shadow: 0 0 0.2rem 0.3rem darkgrey;
 }
 
 nav a {

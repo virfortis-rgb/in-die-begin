@@ -1,8 +1,13 @@
+.home-card-container {
+  margin: 2rem;
+}
+
 .home-card {
   margin: 1rem;
   border: 0.1rem solid darkgrey;
   border-radius: 8px;
   box-shadow: 0 0 0.1rem 0.1rem darkgrey;
+  padding: 0;
 }
 
 .home-card > div {
@@ -24,6 +29,17 @@
 .card-reading {
   margin: 1rem;
   padding: 1rem;
+}
+
+.card-image-container {
+  overflow: hidden;
+  margin: 0;
+}
+
+.card-image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.4rem;
 }
 
 /* .home-page-nav-card {
