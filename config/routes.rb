@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root to: "pages#home"
+  get "pages/about", to: "pages#about", as: :about
   resources :stories, only: [:index, :show] do
     resources :vocab, only: [:new, :create]
   end
