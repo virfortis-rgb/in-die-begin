@@ -15,8 +15,3 @@ body {
   padding: 0;
   background-color: #fefefc;
 }
-
-.flex-column-spaced {
-  display: flex;
-  justify-content: space-between;
-}
