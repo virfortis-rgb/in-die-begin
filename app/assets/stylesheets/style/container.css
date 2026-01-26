@@ -1,10 +1,10 @@
 .container-home-title {
   margin: 0 auto;
-  color: white;
+  color: #fefefc;
 }
 
 .container-title h1, .container-title p {
-  color: white;
+  color: #fefefc;
   letter-spacing: 0.2vw;
   text-shadow: 0.05em 0.05em #2f3034;
 }
@@ -26,6 +26,8 @@
 
 .home-card-container {
   margin: 2rem;
+  display: flex;
+
 }
 
 .container {
