@@ -1,6 +1,8 @@
-<div class="card-reading-title">
-  <%= @story.title %>
-  <div class="card-reading">
+<div class="container">
+  <h2>
+    <%= @story.title %>
+  </h2>
+  <div class="container-with-border">
     <% @story.content.split() do |c| %>
       <span class="unknown-vocab">
         <% if c.include? "." %>

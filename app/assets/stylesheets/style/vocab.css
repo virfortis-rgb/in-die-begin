@@ -1,9 +1,9 @@
 .unknown-vocab {
-  margin: 0.2rem;
-  padding: 0.1rem;
+  margin: 0.4rem;
+  padding: 0.08rem;
   background-color: aquamarine;
   font-size: 2rem;
-  border-radius: 0.1rem;
+  border-radius: 0.2rem;
 }
 
 .unknown-vocab:hover {

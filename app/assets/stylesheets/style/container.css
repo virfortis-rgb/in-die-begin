@@ -1,10 +1,10 @@
 .container-home-title {
   margin: 0 auto;
-  color: white;
+  color: #fefefc;
 }
 
 .container-title h1, .container-title p {
-  color: white;
+  color: #fefefc;
   letter-spacing: 0.2vw;
   text-shadow: 0.05em 0.05em #2f3034;
 }
@@ -26,8 +26,26 @@
 
 .home-card-container {
   margin: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
 }
 
 .container {
+  margin: 0.4rem;
   padding: 1rem;
+}
+
+.container-with-border {
+  margin: 0.4rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0.2rem 0.1rem darkgrey;
+}
+
+.grid-container {
+  margin: 0.4rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
