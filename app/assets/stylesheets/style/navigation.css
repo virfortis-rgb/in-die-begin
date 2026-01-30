@@ -10,10 +10,9 @@ nav {
 }
 
 nav a {
-  color:  #2f3034;
-  font-size: 1.2em;
   text-decoration: none;
-  margin-inline: 0.6rem;
+  color:  #2f3034;
+  font-size: 1rem;
 }
 
 ul {
