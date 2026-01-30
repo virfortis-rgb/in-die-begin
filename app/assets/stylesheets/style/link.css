@@ -1,5 +1,5 @@
 .link {
-  margin: 1rem;
+  margin: 0.6rem;
   text-decoration: none;
   color: black;
 }
@@ -11,7 +11,9 @@
 }
 
 .link-home {
-  margin: 1rem;
-  padding: 0;
+  margin: 0.6rem;
   text-decoration: none;
+  color:  #2f3034;
+  font-size: 1.2em;
+  align-self: center;
 }

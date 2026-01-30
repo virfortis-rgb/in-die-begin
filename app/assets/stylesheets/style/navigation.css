@@ -1,24 +1,31 @@
 nav {
-    position: sticky; /* Toggles between relative and fixed on scroll */
+  position: sticky; /* Toggles between relative and fixed on scroll */
   top: 0;           /* Sticks to the top of the viewport once it hits this offset */
   z-index: 10;      /* Ensures the header is on top of other content */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   background-color: white;
   box-shadow: 0 0 0.2rem 0.1rem darkgrey;
 }
 
 nav a {
-  padding: 10px;
   color:  #2f3034;
   font-size: 1.2em;
   text-decoration: none;
+  margin-inline: 0.6rem;
 }
 
 ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 60vw;
   list-style-type: none;
+  margin: 0.6rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-inline: 0.6rem;
 }
