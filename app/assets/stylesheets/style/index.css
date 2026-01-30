@@ -1,13 +1,17 @@
 @import url("banner.css");
 @import url("container.css");
-@import url("font.css");
+@import url("fonts.css");
 @import url("navigation.css");
 @import url("card.css");
 @import url("form.css");
 @import url("vocab.css");
 @import url("footer.css");
 
+html {
+  overflow-y: scroll;
+}
 body {
   margin: 0;
   padding: 0;
+  background-color: #fefefc;
 }
