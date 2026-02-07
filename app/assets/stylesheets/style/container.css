@@ -32,8 +32,10 @@
 }
 
 .container {
+  justify-self: center;
   margin: 0.4rem;
   padding: 1rem;
+  display: flex;
 }
 
 .container-with-border {
