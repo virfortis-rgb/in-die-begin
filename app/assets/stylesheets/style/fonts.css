@@ -17,3 +17,12 @@
 .left {
   text-align: left;
 }
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.main-title {
+  font-size: 3.2rem;
+  padding: 1rem;
+}

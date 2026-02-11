@@ -1,11 +1,27 @@
 <nav>
   <%= link_to "in die begin_", pages_home_path, class: "pirata-one-regular link-home" %>
-  <ul class="d-flex dlex-column m-0 p-0">
-    <li class="align-self-center">
-      <%= link_to "About", about_path, class: "ovo-regular" %>
+  <ul class="navbar-list">
+    <li class="navbar-list-item">
+      <%= link_to "About", about_path, class: "ovo-regular semi-bold" %>
     </li>
-    <li class="align-self-center">
-      <%= link_to "Stories", stories_path, class: "ovo-regular" %>
-    </li>
+    <% if user_signed_in? %>
+      <li class="navbar-list-item">
+        <%= link_to "Stories", stories_path, class: "ovo-regular semi-bold" %>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag "iStock-1052880600.jpg", class: "avatar", alt: "dropdown menu" %>
+        </a>
+        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+          <%= link_to "TODO", "#", class: "dropdown-item" %>
+          <%= link_to "TODO", "#", class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        </div>
+      </li>
+    <% else %>
+      <li class="navbar-list-item">
+        <%= link_to "Login", new_user_session_path, class: "ovo-regular semi-bold" %>
+      </li>
+    <% end %>
   </ul>
 </nav>
