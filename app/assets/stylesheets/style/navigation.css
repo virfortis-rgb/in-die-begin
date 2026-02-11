@@ -13,6 +13,11 @@ nav a {
   text-decoration: none;
   color:  #2f3034;
   font-size: 1rem;
+
+  &:hover {
+    color: #434448;
+    font-size: 1.2rem;
+  }
 }
 
 .navbar-list {
