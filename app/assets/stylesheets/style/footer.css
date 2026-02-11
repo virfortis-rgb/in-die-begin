@@ -1,6 +1,9 @@
-.footer {
-  text-align: center;
-  margin: 1rem;
-  padding: 0.4rem;
+footer {
+  background-color: #fff8ee;
+  background: url('/karoo-mountains-footer.png');
+  background-size: cover;
+  background-position: top;
   position: sticky;
+  min-height: 56vh;
+  width: auto;
 }
