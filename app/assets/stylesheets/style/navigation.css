@@ -20,7 +20,8 @@ nav a {
   justify-content: flex-end;
   width: 60vw;
   list-style-type: none;
-  margin: 0.6rem;
+  margin: 1rem;
+  margin-inline-end: 1.4rem;
   padding-inline: 0;
 }
 
