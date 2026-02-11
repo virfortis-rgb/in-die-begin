@@ -15,15 +15,16 @@ nav a {
   font-size: 1rem;
 }
 
-ul {
+.navbar-list {
   display: flex;
   justify-content: flex-end;
   width: 60vw;
   list-style-type: none;
   margin: 0.6rem;
+  padding-inline: 0;
 }
 
-li {
+.navbar-list-item {
   display: flex;
   align-items: center;
   margin-inline: 0.6rem;
