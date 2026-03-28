@@ -14,7 +14,7 @@
         <% else %>
           <% vocab_item = c %>
         <% end %>
-        <%= link_to vocab_item, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#newVocab"} %>
+        <%= link_to vocab_item, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#newModal"} %>
         <%= render 'vocab/new' %>
       <% end %>
     </div>
