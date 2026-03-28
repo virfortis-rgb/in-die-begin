@@ -9,5 +9,5 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-@import url("./style/index.css");
+@import "index.css";
 @import "bootstrap";
