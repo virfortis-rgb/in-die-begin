@@ -5,16 +5,20 @@
   <h2>
     <%= @story.title %>
   </h2>
-  <div class="card">
-    <% @story.content.split() do |c| %>
-      <span class="unknown-vocab">
-        <% if c.include? "." %>
-          <%= c %>
-          <br>
-        <% else %>
-          <%= c %>
-        <% end %>
-      </span>
-    <% end %>
-  </div>
-</div>
+  <div class="card p-2">
+    <div>
+      <% vocab_item = "" %>
+      <% @story.content.split() do |c| %>
+        <"span type="button" class="unknown-vocab" data-bs-toggle="modal" data-bs-target="#exampleModal"class="unknown-vocab">
+          <% if c.include? "." %>
+            <%= vocab_item = c %>
+          <% else %>
+            <%= vocab_item = c %>
+          <% end %>
+          <"/span>
+            <%= link_to vocab_item, "#", class: "btn btn-primary rounded-4", data: { bs_toggle: "modal", bs_target: "#newVocab"} %>
+            <%= render 'vocabs/new' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
