@@ -1,8 +1,11 @@
 <div class="container">
+  <%= link_to stories_path, class: "back-link" do %>
+    <i class="fa-solid fa-chevron-left me-1"></i>Back
+  <% end %>
   <h2>
     <%= @story.title %>
   </h2>
-  <div class="container-with-border">
+  <div class="card">
     <% @story.content.split() do |c| %>
       <span class="unknown-vocab">
         <% if c.include? "." %>
@@ -15,3 +18,4 @@
     <% end %>
   </div>
 </div>
+<%= button_to stories_path, class: "btn btn-primary" %>
