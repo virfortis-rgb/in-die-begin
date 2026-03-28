@@ -6,6 +6,9 @@
 @import url("form.css");
 @import url("vocab.css");
 @import url("footer.css");
+@import url("links.css");
+@import url("dropdown.css");
+@import url("avatar.css");
 
 html {
   overflow-y: scroll;
