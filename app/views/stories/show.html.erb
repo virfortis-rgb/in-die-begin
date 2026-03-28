@@ -9,16 +9,14 @@
     <div>
       <% vocab_item = "" %>
       <% @story.content.split() do |c| %>
-        <"span type="button" class="unknown-vocab" data-bs-toggle="modal" data-bs-target="#exampleModal"class="unknown-vocab">
-          <% if c.include? "." %>
-            <%= vocab_item = c %>
-          <% else %>
-            <%= vocab_item = c %>
-          <% end %>
-          <"/span>
-            <%= link_to vocab_item, "#", class: "btn btn-primary rounded-4", data: { bs_toggle: "modal", bs_target: "#newVocab"} %>
-            <%= render 'vocabs/new' %>
-          <% end %>
-        </div>
-      </div>
+        <% if c.include? "." %>
+          <% vocab_item = c %>
+        <% else %>
+          <% vocab_item = c %>
+        <% end %>
+        <%= link_to vocab_item, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#newVocab"} %>
+        <%= render 'vocab/new' %>
+      <% end %>
     </div>
+  </div>
+</div>
