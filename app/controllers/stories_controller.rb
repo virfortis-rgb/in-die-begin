@@ -6,16 +6,17 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    @vocabs
+    @vocabs = vocabs_from_story
   end
 
   private
 
-  word_id = 1
 
-  def vocabs_from_story(word_id)
+  def vocabs_from_story
+    vocabs = []
     @story.content.split() do |c|
-      vocabs << Vocab.new(rating: 0, story_id: @story.id, word_id: word_id)
+      word = Word.create(name: c, meaning: c)
+      vocabs << Vocab.create(rating: 0, story_id: @story.id, word_id: word.id)
     end
     return vocabs
   end
