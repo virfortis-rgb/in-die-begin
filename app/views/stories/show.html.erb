@@ -1,17 +1,25 @@
-<div class="container">
-  <h2>
+<div class="container mt-3">
+  <%= link_to stories_path, class: "back-link" do %>
+    <i class="fa-solid fa-chevron-left me-1"></i>Back
+  <% end %>
+  <h2 class="my-3">
     <%= @story.title %>
   </h2>
-  <div class="container-with-border">
-    <% @story.content.split() do |c| %>
-      <span class="unknown-vocab">
-        <% if c.include? "." %>
-          <%= c %>
-          <br>
-        <% else %>
-          <%= c %>
-        <% end %>
-      </span>
-    <% end %>
+  <div class="card p-2">
+    <div>
+      <% @vocabs.each do |vocab| %>
+        <%= link_to vocab.word.name, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{vocab.id}" } %>
+        <%= render 'vocab/new', vocab: vocab %>
+      <% end %>
+    </div>
+  </div>
+  <div class="card mt-3 p-2">
+    <h4>Stats en goed</h4>
+    <p>Jou vordering met <strong><%= @story.title %></strong> : </p>
+    <div class="progress mb-3" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+    </div>
+    <p>Dit sal ook lekker wees om die stats van die storie te sien</p>
+    <p>nuwe woorde, totale woorde</p>
   </div>
 </div>

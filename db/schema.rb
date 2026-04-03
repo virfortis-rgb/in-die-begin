@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_26_092336) do
+ActiveRecord::Schema[8.1].define(version: 2026_03_29_023737) do
   create_table "stories", force: :cascade do |t|
     t.string "author"
     t.boolean "completed"
@@ -46,6 +46,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_26_092336) do
   create_table "words", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "meaning"
+    t.string "name"
     t.datetime "updated_at", null: false
   end
 
