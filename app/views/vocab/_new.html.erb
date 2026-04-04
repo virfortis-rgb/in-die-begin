@@ -8,8 +8,12 @@
       <div class="modal-body">
         <p><%= vocab.word.name %></p>
         <div class="container">
-          <% vocab.word.definitions.each do |definition| %>
-            <p><%= definition %></p>
+          <% if vocab.word.definitions != nil %>
+            <% vocab.word.definitions["glosbe"].each do |definition| %>
+              <p><%= definition %></p>
+            <% end %>
+          <% else %>
+            <p>Word definitions has not been added to the DB yet...patience yound padawan</p>
           <% end %>
           <p>Dan moet jy Word en Storie gebruik om 'n nuwe Vocab te maak as daar save geklink word</p>
         </div>
