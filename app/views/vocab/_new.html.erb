@@ -6,9 +6,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p> Die Actual Word kom hier -- hoe gaan ek die info tot hier kry vocab.word??</p>
+        <p><%= vocab.word.name %></p>
         <div class="container">
-          <p>TODO Die betekenis kom hier van die web af ...en save die betekenisse in Word.new.</p>
+          <% vocab.word.definitions[:glosbe].each do |definition| %>
+            <p><%= definition %></p>
+          <% end %>
           <p>Dan moet jy Word en Storie gebruik om 'n nuwe Vocab te maak as daar save geklink word</p>
         </div>
       </div>
