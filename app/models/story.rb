@@ -1,4 +1,5 @@
 class Story < ApplicationRecord
+  has_many :vocabs, dependent: :destroy
 
   def create_vocabs_array
     vocabs = []
