@@ -8,12 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+puts "Creating stories ..."
+
 Story.create(title: "Die Kat", content: "Dit is ’n kat.
 Die kat is klein.
 Die kat sien ’n bal.
 Die kat speel met die bal.
 Die kat is bly.").create_vocabs
-
 
 Story.create(title: "Die Hond", content: "Dit is ’n hond.
 Die hond is groot.
