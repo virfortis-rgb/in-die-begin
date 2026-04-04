@@ -8,7 +8,7 @@
       <div class="modal-body">
         <p><%= vocab.word.name %></p>
         <div class="container">
-          <% vocab.word.definitions[:glosbe].each do |definition| %>
+          <% vocab.word.definitions.each do |definition| %>
             <p><%= definition %></p>
           <% end %>
           <p>Dan moet jy Word en Storie gebruik om 'n nuwe Vocab te maak as daar save geklink word</p>

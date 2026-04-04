@@ -12,7 +12,8 @@ Story.create(title: "Die Kat", content: "Dit is ’n kat.
 Die kat is klein.
 Die kat sien ’n bal.
 Die kat speel met die bal.
-Die kat is bly.")
+Die kat is bly.").create_vocabs
+
 
 Story.create(title: "Die Hond", content: "Dit is ’n hond.
 Die hond is groot.
@@ -114,4 +115,4 @@ Sy bak koekies en kook tee.
 Die huis ruik heerlik.
 Die kinders sit by die tafel en luister na stories.
 Ouma vertel van die ou dae.
-By Ouma se huis voel almal geliefd.")
+By Ouma se huis voel almal geliefd.").create_vocabs

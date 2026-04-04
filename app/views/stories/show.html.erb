@@ -7,7 +7,7 @@
   </h2>
   <div class="card p-2">
     <div>
-      <% @vocabs.each do |vocab| %>
+      <% @story.vocabs.each do |vocab| %>
         <%= link_to vocab.word.name, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{vocab.id}" } %>
         <%= render 'vocab/new', vocab: vocab, story: @story, word: @word%>
       <% end %>

@@ -1,14 +1,13 @@
 class Story < ApplicationRecord
   has_many :vocabs, dependent: :destroy
 
-  def create_vocabs_array
+  def create_vocabs
     vocabs = []
     self.content.split() do |c|
       c = "’n" ? c = "'n" : c
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
     end
-    return vocabs
   end
 
   private
