@@ -72,3 +72,5 @@ gem "bootstrap", "~> 5.3"
 gem "sassc-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+
+gem "nokogiri"
