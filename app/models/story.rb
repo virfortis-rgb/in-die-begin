@@ -19,7 +19,16 @@ class Story < ApplicationRecord
 
   private
 
-  def scrape_word_definitions
-    # return an array of defs
+  def scrape_word_definitions(word)
+    # return an hash of defs
+    word = word
+    url = ""
+
+    html_file = URI.parse(url).read
+    html_doc = Nokogiri::HTML.parse(html_file)
+
+    html_doc.search().each do |element|
+      element.text.strip
+    end
   end
 end
