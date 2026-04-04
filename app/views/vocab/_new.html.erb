@@ -10,12 +10,11 @@
         <div class="container">
           <% if vocab.word.definitions != nil %>
             <% vocab.word.definitions["glosbe"].each do |definition| %>
-              <p><%= definition %></p>
+              <span><%= definition %></span>
             <% end %>
           <% else %>
-            <p>Word definitions has not been added to the DB yet...patience yound padawan</p>
+            <p>Word definitions has not been added to the DB yet...patience young padawan</p>
           <% end %>
-          <p>Dan moet jy Word en Storie gebruik om 'n nuwe Vocab te maak as daar save geklink word</p>
         </div>
       </div>
       <div class="modal-footer">
