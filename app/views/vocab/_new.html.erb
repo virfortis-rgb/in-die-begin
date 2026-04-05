@@ -2,24 +2,33 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          <p class="">
+            <strong>
+              <%= vocab.word.name %>
+            </strong>
+          </p>
+        </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p><%= vocab.word.name %></p>
         <div class="container">
-          <% if vocab.word.definitions != nil %>
-            <% vocab.word.definitions["glosbe"].each do |definition| %>
-              <span><%= definition %></span>
+          <ul class="list-group list-group-flush">
+            <% if vocab.word.definitions != nil %>
+              <% vocab.word.definitions["glosbe"].each do |definition| %>
+                <li class="list-group-item">
+                  <%= definition %>
+                </li>
+              <% end %>
+            <% else %>
+              <p>Word definitions has not been added to the DB yet...patience young padawan</p>
             <% end %>
-          <% else %>
-            <p>Word definitions has not been added to the DB yet...patience young padawan</p>
-          <% end %>
+          </ul>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Maak toe</button>
-        <button type="button" class="btn btn-primary">Onthou <strong>die vocab.word</strong></button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Maak toe</button>
+        <button type="button" class="btn btn-primary">Onthou hierdie woord</button>
       </div>
     </div>
   </div>
