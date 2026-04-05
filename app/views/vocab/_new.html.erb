@@ -6,15 +6,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p><%= vocab.word.name %></p>
+        <p class="">
+          <strong>
+            <%= vocab.word.name %></p>
+        </strong>
         <div class="container">
-          <% if vocab.word.definitions != nil %>
-            <% vocab.word.definitions["glosbe"].each do |definition| %>
-              <span><%= definition %></span>
+          <ul class="list-group list-group-flush">
+            <% if vocab.word.definitions != nil %>
+              <% vocab.word.definitions["glosbe"].each do |definition| %>
+                <li class="list-group-item">
+                  <%= definition %>
+                </li>
+              <% end %>
+            <% else %>
+              <p>Word definitions has not been added to the DB yet...patience young padawan</p>
             <% end %>
-          <% else %>
-            <p>Word definitions has not been added to the DB yet...patience young padawan</p>
-          <% end %>
+          </ul>
         </div>
       </div>
       <div class="modal-footer">
