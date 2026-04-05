@@ -2,15 +2,18 @@ class Story < ApplicationRecord
   has_many :vocabs, dependent: :destroy
 
   def create_vocabs
+    puts "fetching vocabs from glosbe. Wait a moment or two..."
     vocabs = []
     self.content.split() do |c|
       c == "’n" ? c = "'n" : c
-      c.include?(".") ? c.gsub(".", "") : c
+      c.include?(".\n") ? c.gsub("./n", "") : c
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
-      puts "sleeping"
+      n = 1
       30.times do
-        pp ".\r"
+        print "#{n}/30\r"
+        $stdout.flush
+        n += 1
         sleep(1)
       end
     end
