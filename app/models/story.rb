@@ -5,11 +5,12 @@ class Story < ApplicationRecord
     vocabs = []
     self.content.split() do |c|
       c == "’n" ? c = "'n" : c
+      c.include?(".") ? c.gsub(".", "") : c
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
       puts "sleeping"
       30.times do
-        p "\r."
+        pp ".\r"
         sleep(1)
       end
     end
