@@ -6,7 +6,8 @@
     <div class="card p-0 rounded-top col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
       <%= image_tag 'Cat-on-couch.jpg', class: "card-img-top" %>
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title" style="font-weight: 800;">
+          <%= story.title %>
         </h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
         <%= link_to story.title, story_path(story), class: "btn btn-primary" %>
