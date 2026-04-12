@@ -12,7 +12,7 @@ class Story < ApplicationRecord
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
       n = 1
-      30.times do
+      15.times do
         print "Sleeping between HTTP requests: #{n}/30s\r"
         $stdout.flush
         n += 1
