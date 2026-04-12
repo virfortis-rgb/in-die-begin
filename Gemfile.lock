@@ -450,7 +450,7 @@ DEPENDENCIES
   capybara
   debug
   devise
-  font-awesome-sass (~> 6.1)
+  font-awesome-sass (~> 6.7.2)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
