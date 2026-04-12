@@ -13,7 +13,7 @@ class Story < ApplicationRecord
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
       n = 1
       15.times do
-        print "Sleeping between HTTP requests: #{n}/30s\r"
+        print "Sleeping between HTTP requests: #{n}/15s\r"
         $stdout.flush
         n += 1
         sleep(1)
