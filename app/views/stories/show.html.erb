@@ -12,8 +12,12 @@
         <% c.include?("." || ",") ? c = c.gsub("." || ",", "") : c %>
         <% word = Word.find_by(name: c) %>
         <% vocab = Vocab.find_by(story: @story, word: word) %>
-        <%= link_to c, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{vocab.id}" } %>
-        <%= render 'vocab/new', vocab: vocab, story: @story, word: vocab.word%>
+        <% if vocab.nil? %>
+          <%= c %>
+        <% else %>
+          <%= link_to c, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{vocab.id}" } %>
+          <%= render 'vocab/new', vocab: vocab, story: @story, word: vocab.word%>
+        <% end %>
       <% end %>
     </div>
   </div>
