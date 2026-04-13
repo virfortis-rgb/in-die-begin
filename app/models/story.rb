@@ -31,7 +31,7 @@ class Story < ApplicationRecord
     url = "https://en.glosbe.com/af/en/#{afrikaans_word}"
     html_file = URI.parse(url).read
     html_doc = Nokogiri::HTML.parse(html_file)
-    array = html_doc.xpath("//h3").collect(&:text)
+    array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
     definitions[:glosbe] = array.map { |w| w.gsub(/\n/, "") }
     return definitions
   end
