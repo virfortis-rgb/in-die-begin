@@ -12,8 +12,8 @@ class Story < ApplicationRecord
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
       vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
       n = 1
-      30.times do
-        print "Sleeping between HTTP requests: #{n}/30s\r"
+      15.times do
+        print "Sleeping between HTTP requests: #{n}/15s\r"
         $stdout.flush
         n += 1
         sleep(1)
@@ -31,7 +31,7 @@ class Story < ApplicationRecord
     url = "https://en.glosbe.com/af/en/#{afrikaans_word}"
     html_file = URI.parse(url).read
     html_doc = Nokogiri::HTML.parse(html_file)
-    array = html_doc.xpath("//h3").collect(&:text)
+    array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
     definitions[:glosbe] = array.map { |w| w.gsub(/\n/, "") }
     return definitions
   end
