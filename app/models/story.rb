@@ -28,7 +28,7 @@ class Story < ApplicationRecord
       c == "’n" ? c = "'n" : c
       c.include?("." || ",") ? c = c.gsub("." || ",", "") : c  # TODO all punctuation
       word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
-      vocabs << Vocab.find_or_create_by!(rating: 0, story_id: self.id, word_id: word.id)
+      vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story_id: self.id, word_id: word.id)
       n = 1
       15.times do
         print "Sleeping between HTTP requests: #{n}/15s\r"

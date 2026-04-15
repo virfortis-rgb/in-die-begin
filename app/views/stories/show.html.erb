@@ -9,10 +9,14 @@
     <div>
       <% @story.content_for_display.each do |c| %>
         <% if c.is_a?(Vocab) %>
-          <%= link_to c.word.name, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{c.id}" } %>
-          <%= render 'vocab/new', vocab: c, story: @story, word: c.word %>
+          <% if c.seen? == false %>
+            <%= link_to c.word.name, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{c.id}" } %>
+            <%= render 'vocab/new', vocab: c, story: @story, word: c.word %>
+          <% else %>
+            <span><%= c.word.name %></span>
+          <% end %>
         <% else %>
-          <%= c %>
+          <span><%= c %></span>
         <% end %>
       <% end %>
     </div>
