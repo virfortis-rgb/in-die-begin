@@ -1,6 +1,24 @@
 class Story < ApplicationRecord
   has_many :vocabs, dependent: :destroy
 
+  def content_for_display
+    display_content = []
+    self.content.split('.') do |sentence|
+      split_sentence = []
+      sentence.split() do |w|
+        w == "’n" ? w = "'n" : w
+        w.include?(",") ? w = w.gsub(",", "") : w
+        word = Word.find_by(name: w)
+        vocab = Vocab.find_by(story: self, word: word)
+        vocab.nil? ? vocab = w : vocab
+        split_sentence << vocab
+      end
+      display_content << split_sentence
+      display_content << ". "
+    end
+    display_content.flatten
+  end
+
   def create_vocabs # Vocabs should be properly saved, otherwise can't display NB!!
     puts "Fetching vocabs from glosbe. Wait a moment or two..."
     vocabs = []

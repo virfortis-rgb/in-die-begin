@@ -7,16 +7,12 @@
   </h2>
   <div class="card p-2">
     <div>
-      <% @story.content.split() do |c| %>
-        <% c == "’n" ? c = "'n" : c %>
-        <% c.include?("." || ",") ? c = c.gsub("." || ",", "") : c %>
-        <% word = Word.find_by(name: c) %>
-        <% vocab = Vocab.find_by(story: @story, word: word) %>
-        <% if vocab.nil? %>
-          <%= c %>
+      <% @story.content_for_display.each do |c| %>
+        <% if c.is_a?(Vocab) %>
+          <%= link_to c.word.name, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{c.id}" } %>
+          <%= render 'vocab/new', vocab: c, story: @story, word: c.word %>
         <% else %>
-          <%= link_to c, "#", class: "btn btn-primary rounded-4 m-1", data: { bs_toggle: "modal", bs_target: "#vocabModal#{vocab.id}" } %>
-          <%= render 'vocab/new', vocab: vocab, story: @story, word: vocab.word%>
+          <%= c %>
         <% end %>
       <% end %>
     </div>
