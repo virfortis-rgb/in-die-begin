@@ -10,15 +10,27 @@
   border-radius: 0.2rem;
 }
 
-.link-home {
-  margin: 0.8rem;
-  margin-inline-start: 1.4rem;
+.link-home-desktop {
+  margin: 1rem;
+  margin-inline-start: 0.5rem;
   text-decoration: none;
   color:  #2f3034;
-  font-size: 1.6em;
+  font-size: 1.2rem;
   align-self: center;
     &:hover {
     color: #434448;
-    font-size: 1.5srem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .link-home-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .link-home-phone {
+    display: none;
   }
 }
