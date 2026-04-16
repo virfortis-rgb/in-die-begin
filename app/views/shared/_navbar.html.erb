@@ -2,6 +2,9 @@
   <%= link_to "in die begin_", root_path, class: "pirata-one-regular link-home" %>
   <ul class="navbar-list">
     <li class="navbar-list-item">
+      <%= link_to "Tuis", root_path, class: "ovo-regular semi-bold" %>
+    </li>
+    <li class="navbar-list-item">
       <%= link_to "About", about_path, class: "ovo-regular semi-bold" %>
     </li>
     <% if user_signed_in? %>
@@ -10,7 +13,7 @@
       </li>
       <li class="dropdown align-items-center">
         <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa-solid fa-circle-user" style="font-size: 2rem;"></i>
+          <i class="fa-solid fa-circle-user text-primary" style="font-size: 2rem;"></i>
         </a>
         <div class="dropdown-content" aria-labelledby="navbarDropdown">
           <%= link_to "TODO", "#", class: "dropdown-item" %>
