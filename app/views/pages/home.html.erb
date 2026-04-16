@@ -18,15 +18,19 @@
   </p>
 </div>
 <div class="container my-5">
-  <h2>Jou Stories</h2>
+  <h2>Lees Stories</h2>
   <div class="row gap-2 justify-content-center">
     <% Story.last(3).each do |story| %>
-      <div class="col-sm-12 col-md-4 card p-0" style="width: 18rem;">
+      <div class="col-sm-12 col-md-4 card p-0 card-hover" style="width: 18rem;">
         <%= image_tag 'protea-footer.png', class: "card-img-top" %>
         <div class="card-body px-2">
           <h5 class="card-title"><%= story.title %></h5>
           <p class="card-text text-truncate"><%= story.content %></p>
-          <%= link_to 'Lees nou', story_path(story.id), class: "btn btn-primary" %>
+          <% if user_signed_in? %>
+            <%= link_to 'Lees nou', story_path(story.id), class: "btn btn-primary" %>
+          <% else %>
+            <%= link_to 'Lees nou', user_session_path, class: "btn btn-primary" %>
+          <% end %>
         </div>
       </div>
     <% end %>
