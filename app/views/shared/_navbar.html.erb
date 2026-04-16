@@ -1,6 +1,9 @@
 <nav>
-  <%= link_to "in die begin_", pages_home_path, class: "pirata-one-regular link-home" %>
+  <%= link_to "in die begin_", root_path, class: "pirata-one-regular link-home" %>
   <ul class="navbar-list">
+    <li class="navbar-list-item">
+      <%= link_to "Tuis", root_path, class: "ovo-regular semi-bold" %>
+    </li>
     <li class="navbar-list-item">
       <%= link_to "About", about_path, class: "ovo-regular semi-bold" %>
     </li>
@@ -8,9 +11,9 @@
       <li class="navbar-list-item">
         <%= link_to "Stories", stories_path, class: "ovo-regular semi-bold" %>
       </li>
-      <li class="dropdown">
+      <li class="dropdown align-items-center">
         <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= image_tag "iStock-1052880600.jpg", class: "avatar", alt: "dropdown menu" %>
+          <i class="fa-solid fa-circle-user text-primary" style="font-size: 2rem;"></i>
         </a>
         <div class="dropdown-content" aria-labelledby="navbarDropdown">
           <%= link_to "TODO", "#", class: "dropdown-item" %>

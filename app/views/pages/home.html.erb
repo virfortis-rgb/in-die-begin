@@ -4,15 +4,34 @@
     <p class="ovo-regular center">in die begin was die woord
       en die woord was by God
       <br>
-      en die woord was self god</p>
+      en die woord was self god
+    </p>
   </div>
 </div>
-<div class="container">
-  <p>Welcome to
-    <strong>in die begin_</strong>
+<div class="container mt-5">
+  <h2>In die begin</h2>
+  <p>
+    <em>
+      In die begin
+    </em>
+    is 'n webtoepassing waar mense wat Afrikaans leer, net lekker kan lees.
   </p>
 </div>
-<div class="container">
-  <span>Display a cool carousal or something here</span>
+<div class="container my-5">
+  <h2>Jou Stories</h2>
+  <div class="row gap-2 justify-content-center">
+    <% Story.last(3).each do |story| %>
+      <div class="col-sm-12 col-md-4 card p-0" style="width: 18rem;">
+        <%= image_tag 'protea-footer.png', class: "card-img-top" %>
+        <div class="card-body px-2">
+          <h5 class="card-title"><%= story.title %></h5>
+          <p class="card-text text-truncate"><%= story.content %></p>
+          <%= link_to 'Lees nou', story_path(story.id), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
 </div>
 <div>

@@ -4,8 +4,8 @@ source "https://rubygems.org"
 gem "rails", "~> 8.1.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
+# Use postgresql as the database for Active Record
+gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -70,7 +70,7 @@ gem "sprockets-rails", "~> 3.4.2"
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 5.3"
 gem "sassc-rails"
-gem "font-awesome-sass", "~> 6.1"
+gem "font-awesome-sass", "~> 6.7.2"
 gem "simple_form", github: "heartcombo/simple_form"
 
 gem "nokogiri"

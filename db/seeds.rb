@@ -117,3 +117,5 @@ Die huis ruik heerlik.
 Die kinders sit by die tafel en luister na stories.
 Ouma vertel van die ou dae.
 By Ouma se huis voel almal geliefd.").create_vocabs
+
+puts "Done creating stories..."
