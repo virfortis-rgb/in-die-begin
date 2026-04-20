@@ -27,8 +27,8 @@ class Story < ApplicationRecord
       puts "Fetching vocab #{count}/#{self.content.size} for this story.\r"
       c == "’n" ? c = "'n" : c
       c.include?("." || ",") ? c = c.gsub("." || ",", "") : c  # TODO all punctuation
-      word = Word.find_or_create_by!(name: c, definitions: scrape_word_definitions(c))
-      vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story_id: self.id, word_id: word.id)
+      word = scrape_word_definitions(c)
+      vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story: self, word: word)
       n = 1
       15.times do
         print "Sleeping between HTTP requests: #{n}/15s\r"
@@ -43,15 +43,15 @@ class Story < ApplicationRecord
   private
 
   def scrape_word_definitions(afrikaans_word)
-    definitions = {
-      glosbe: []
-    }
     url = "https://en.glosbe.com/af/en/#{afrikaans_word}"
     html_file = URI.parse(url).read
     html_doc = Nokogiri::HTML.parse(html_file)
     array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
-    definitions[:glosbe] = array.map { |w| w.gsub(/\n/, "") }
-    return definitions
+    word = Word.find_or_create_by!(name: afrikaans_word)
+    array.each do |a|
+      Definition.create!(source: url, translation: a, word: word)
+    end
+    return word
   end
 
 end

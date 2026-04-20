@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source: MyString
+  translation: MyString
+  sentence: MyString
+  word: one
+
+two:
+  source: MyString
+  translation: MyString
+  sentence: MyString
+  word: two
