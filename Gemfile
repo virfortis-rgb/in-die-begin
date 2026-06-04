@@ -69,7 +69,8 @@ gem "devise"
 gem "sprockets-rails", "~> 3.4.2"
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 5.3"
-gem "sassc-rails"
+gem "cssbundling-rails"
+
 gem "font-awesome-sass", "~> 6.7.2"
 gem "simple_form", github: "heartcombo/simple_form"
 
