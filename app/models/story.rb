@@ -31,6 +31,7 @@ class Story < ApplicationRecord
       c.include?(punctuation) ? c = c.gsub(punctuation, "") : c
       # c.gsub(/\s{2,}/, " ")
       word = scrape_word_definitions(c) # update later for more words, atm just one word
+      # check for double words
       vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story: self, word: word)
       n = 1
       15.times do
