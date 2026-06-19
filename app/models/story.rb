@@ -27,7 +27,7 @@ class Story < ApplicationRecord
       puts "Fetching vocab #{count}/#{self.content.size} for this story.\r"
       c == "’n" ? c = "'n" : c
       c.include?("." || ",") ? c = c.gsub("." || ",", "") : c  # TODO all punctuation
-      word = scrape_word_definitions(c)
+      word = scrape_word_definitions(c) # update later for more words, atm just one word
       vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story: self, word: word)
       n = 1
       15.times do
