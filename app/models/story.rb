@@ -51,12 +51,11 @@ class Story < ApplicationRecord
     html_doc = Nokogiri::HTML.parse(html_file)
     array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
     word = Word.find_or_create_by!(name: afrikaans_word)
-    unless array do
+    if array do
       array.each do |a|
         Definition.create!(source: url, translation: a, word: word)
       end
     end
     return word
   end
-
 end
