@@ -27,7 +27,7 @@ class Story < ApplicationRecord
       puts "Fetching vocab #{count}/#{self.content.size} for this story.\r"
       c == "’n" ? c = "'n" : c
       # c.include?("." || ",") ? c = c.gsub("." || ",", "") : c  # TODO all punctuation
-      punctuation = /[.,?\/#!$%&\*;:{}=\-_`()@]/
+      punctuation = "/[.,?\/#!$%&\*;:{}=\-_`()@]/"
       c.include?(punctuation) ? c = c.gsub(punctuation, "") : c
       # c.gsub(/\s{2,}/, " ")
       word = scrape_word_definitions(c) # update later for more words, atm just one word
@@ -50,12 +50,13 @@ class Story < ApplicationRecord
     url = "https://en.glosbe.com/af/en/#{afrikaans_word}"
     html_file = URI.parse(url).read
     html_doc = Nokogiri::HTML.parse(html_file)
-    array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
+    words_array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
     word = Word.find_or_create_by!(name: afrikaans_word)
-    array.each do |a|
-      Definition.create!(source: url, translation: a, word: word)
+    if words_array
+      words_array.each do |a|
+        Definition.create!(source: url, translation: a, word: word)
+      end
     end
     return word
   end
-
 end
