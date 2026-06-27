@@ -59,3 +59,4 @@ class Story < ApplicationRecord
     return word
   end
 end
+end
