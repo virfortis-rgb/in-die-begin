@@ -370,9 +370,7 @@ GEM
       google-protobuf (~> 4.31)
     sass-embedded (1.101.0-x86_64-linux-musl)
       google-protobuf (~> 4.31)
-    sassc (2.1.0)
-      ffi (~> 1.9)
-    sassc (2.1.0-x86_64-linux)
+    sassc (2.4.0)
       ffi (~> 1.9)
     securerandom (0.4.1)
     selenium-webdriver (4.45.0)
@@ -471,7 +469,7 @@ DEPENDENCIES
   jbuilder
   kamal
   nokogiri (~> 1.19.3)
-  pg (~> 1.1)
+  pg
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.2)
@@ -626,8 +624,7 @@ CHECKSUMS
   sass-embedded (1.101.0-arm-linux-musleabihf) sha256=d993a3ad017250d46d1312bc10cfded5ab4585906d37a60a56494bd662182d3a
   sass-embedded (1.101.0-x86_64-linux-gnu) sha256=ff48452b2351eaaf4e6e02f59de0e9e35f6f163e8456d520db49b4d87cf73c27
   sass-embedded (1.101.0-x86_64-linux-musl) sha256=2286feef3c7a8d9bbb075aa1651e1a81942aca1213f7c2d30cc1d6f4eb5b4104
-  sassc (2.1.0) sha256=da119e3a122d4d80b5f26db4f26110070f4bcb4b34ecb5e76663387e37767c1a
-  sassc (2.1.0-x86_64-linux) sha256=36105415d6e8e69a6b9a183f518f0ce1989fbb23fb3fe0dc8bd7aa90e81b3c0a
+  sassc (2.4.0) sha256=4c60a2b0a3b36685c83b80d5789401c2f678c1652e3288315a1551d811d9f83e
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   selenium-webdriver (4.45.0) sha256=ecac65a4df86ac6f7d707e6dcbacaa9c08b6cf2b966babecfb9653c5aa13e2d1
   simple_form (5.4.1)
