@@ -28,7 +28,7 @@ class Story < ApplicationRecord
       c == "’n" ? c = "'n" : c
       # c.include?("." || ",") ? c = c.gsub("." || ",", "") : c  # TODO all punctuation
       punctuation = /[.,?\/#!$%&\*;:{}=\-_`()@]/
-      c.include?(punctuation) ? c = c.gsub(punctuation, "") : c
+      c.match?(punctuation) ? c = c.gsub(punctuation, "") : c
       # c.gsub(/\s{2,}/, " ")
       word = scrape_word_definitions(c) # update later for more words, atm just one word
       # check for double words
