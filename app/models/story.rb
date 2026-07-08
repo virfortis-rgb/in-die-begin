@@ -48,14 +48,23 @@ class Story < ApplicationRecord
 
   def scrape_word_definitions(afrikaans_word)
     url = "https://en.glosbe.com/af/en/#{afrikaans_word}"
-    html_file = URI.parse(url).read
-    html_doc = Nokogiri::HTML.parse(html_file)
-    array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
-    word = Word.find_or_create_by!(name: afrikaans_word)
-    array.each do |a|
-      Definition.create!(source: url, translation: a, word: word)
+    if valid_url?(url)
+      html_file = URI.parse(url).read
+      html_doc = Nokogiri::HTML.parse(html_file)
+      array = html_doc.xpath("//h3").collect(&:text) # TODO also get example sentence
+      word = Word.find_or_create_by!(name: afrikaans_word)
+      array.each do |a|
+        Definition.create!(source: url, translation: a, word: word)
+      end
+      return word
     end
-    return word
+  end
+
+  def valid_url?(url)
+    URI.parse(url)
+    return true
+  rescue URI::InvalidURIError
+    return false
   end
 
 end
