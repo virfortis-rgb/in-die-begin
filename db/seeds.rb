@@ -14,7 +14,7 @@ Story.create(title: "Die Kat", content: "Dit is ’n kat.
 Die kat is klein.
 Die kat sien ’n bal.
 Die kat speel met die bal.
-Die kat is bly.").create_vocabs
+Die kat is bly.")
 
 Story.create(title: "Die Hond", content: "Dit is ’n hond.
 Die hond is groot.
