@@ -34,8 +34,8 @@ class Story < ApplicationRecord
       # check for double words
       vocabs << Vocab.find_or_create_by!(rating: 0, seen: false, story: self, word: word)
       n = 1
-      15.times do
-        print "Sleeping between HTTP requests: #{n}/15s\r"
+      10.times do
+        print "Sleeping between HTTP requests: #{n}/10s\r"
         $stdout.flush
         n += 1
         sleep(1)
